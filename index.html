@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arvind G — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">AG<span class="dot">.</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Me</button>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="orb orb1"></div>
+      <div class="orb orb2"></div>
+      <div class="orb orb3"></div>
+      <canvas id="particles"></canvas>
+    </div>
+    <div class="hero-content">
+      <p class="hero-greeting">👋 Hello, I'm</p>
+      <h1 class="hero-name">Arvind G</h1>
+      <div class="hero-role">
+        <span class="role-prefix">I build </span>
+        <span class="typewriter" id="typewriter"></span>
+        <span class="cursor">|</span>
+      </div>
+      <p class="hero-desc">Data &amp; AI Engineer at HP Inc — designing scalable AI data platforms, agentic workflows, and LLM-powered systems on Microsoft Azure.</p>
+      <div class="hero-cta">
+        <button class="btn-primary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View My Work</button>
+        <button class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Let's Talk</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num" data-target="6">0</span><span>+</span><p>AI Projects</p></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num" data-target="4">0</span><span>+</span><p>Years Exp</p></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num" data-target="250">0</span><span>+</span><p>Trained</p></div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-tag">// about me</div>
+      <h2 class="section-title">Who I Am</h2>
+      <div class="about-grid">
+        <div class="about-image-wrap">
+          <div class="about-image">
+            <div class="avatar-placeholder">
+              <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="60" cy="45" r="25" fill="url(#grad1)"/>
+                <ellipse cx="60" cy="100" rx="40" ry="28" fill="url(#grad1)"/>
+                <defs>
+                  <linearGradient id="grad1" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#6366f1"/>
+                    <stop offset="1" stop-color="#06b6d4"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </div>
+          <div class="about-badge badge1">🤖 GenAI</div>
+          <div class="about-badge badge2">☁️ Azure</div>
+          <div class="about-badge badge3">🔒 Secure</div>
+        </div>
+        <div class="about-text">
+          <p>I'm <strong>Arvind G</strong>, a results-driven <strong>Data &amp; AI Engineer at HP Inc</strong> with ~4 years of experience designing scalable data platforms and next-generation AI systems on Microsoft Azure. I specialize in Generative AI, Agentic AI workflows, and LLM-based applications using LangChain and LangGraph.</p>
+          <p>Currently pursuing an <strong>Executive M.Tech in Data Science &amp; Analytics at IIT Bhilai</strong>, I've trained 250+ professionals on real-world GenAI applications and hold certifications in AWS, Azure, and Databricks.</p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <span class="hi-icon">🤖</span>
+              <div><strong>Generative AI</strong><p>LLMs, RAG, agentic workflows, and LangChain at enterprise scale.</p></div>
+            </div>
+            <div class="highlight-item">
+              <span class="hi-icon">☁️</span>
+              <div><strong>Cloud-Native</strong><p>Azure, Databricks, and distributed data platforms in production.</p></div>
+            </div>
+            <div class="highlight-item">
+              <span class="hi-icon">🔧</span>
+              <div><strong>End-to-End</strong><p>From data pipelines and ETL to GenAI APIs and agent orchestration.</p></div>
+            </div>
+          </div>
+          <a href="Arvind_G_Resume.pdf" class="btn-primary" download>Download Resume</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-tag">// what I know</div>
+      <h2 class="section-title">My Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">🧠</div>
+          <h3>AI &amp; GenAI</h3>
+          <div class="skill-bars">
+            <div class="skill-bar"><span>LLMs / RAG</span><div class="bar"><div class="bar-fill" data-w="92"></div></div></div>
+            <div class="skill-bar"><span>LangChain / LangGraph</span><div class="bar"><div class="bar-fill" data-w="90"></div></div></div>
+            <div class="skill-bar"><span>Vector Databases</span><div class="bar"><div class="bar-fill" data-w="88"></div></div></div>
+            <div class="skill-bar"><span>Prompt Engineering</span><div class="bar"><div class="bar-fill" data-w="85"></div></div></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🤖</div>
+          <h3>Agentic AI</h3>
+          <div class="skill-bars">
+            <div class="skill-bar"><span>Autonomous Agents</span><div class="bar"><div class="bar-fill" data-w="88"></div></div></div>
+            <div class="skill-bar"><span>Multi-Agent Orchestration</span><div class="bar"><div class="bar-fill" data-w="85"></div></div></div>
+            <div class="skill-bar"><span>AutoGen / CrewAI</span><div class="bar"><div class="bar-fill" data-w="82"></div></div></div>
+            <div class="skill-bar"><span>MCP / Tool Calling</span><div class="bar"><div class="bar-fill" data-w="80"></div></div></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">☁️</div>
+          <h3>Data &amp; Cloud</h3>
+          <div class="skill-bars">
+            <div class="skill-bar"><span>Python / PySpark</span><div class="bar"><div class="bar-fill" data-w="93"></div></div></div>
+            <div class="skill-bar"><span>Azure / Databricks</span><div class="bar"><div class="bar-fill" data-w="88"></div></div></div>
+            <div class="skill-bar"><span>Apache Spark</span><div class="bar"><div class="bar-fill" data-w="82"></div></div></div>
+            <div class="skill-bar"><span>Docker / Kubernetes</span><div class="bar"><div class="bar-fill" data-w="76"></div></div></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">⚙️</div>
+          <h3>Languages &amp; Tools</h3>
+          <div class="skill-bars">
+            <div class="skill-bar"><span>Python / SQL</span><div class="bar"><div class="bar-fill" data-w="95"></div></div></div>
+            <div class="skill-bar"><span>FastAPI / Flask</span><div class="bar"><div class="bar-fill" data-w="85"></div></div></div>
+            <div class="skill-bar"><span>JavaScript / Node.js</span><div class="bar"><div class="bar-fill" data-w="78"></div></div></div>
+            <div class="skill-bar"><span>Git / CI-CD</span><div class="bar"><div class="bar-fill" data-w="90"></div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="tech-pills">
+        <span>Python</span><span>LangChain</span><span>LangGraph</span><span>Azure</span><span>Databricks</span>
+        <span>PySpark</span><span>LLMs</span><span>RAG</span><span>AutoGen</span><span>CrewAI</span>
+        <span>MCP</span><span>FastAPI</span><span>Docker</span><span>Kubernetes</span><span>SQL</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-tag">// where I've worked</div>
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div class="tl-title-block">
+                <h3 class="tl-role">Data Engineer</h3>
+                <span class="tl-company">HP Inc</span>
+              </div>
+              <span class="tl-date">Aug 2022 – Present</span>
+            </div>
+            <ul class="tl-list">
+              <li><strong>CCO Executive Chatbot:</strong> Built a conversational Agentic AI BOT for the Chief Commercial Organization using OpenAI Agents SDK, MCP, and Databricks Genie — giving C-suite leaders natural-language access to live sales, funnel, and financial data.</li>
+              <li><strong>Agentic GenAI Platform – Competitive Intelligence:</strong> Built an agentic solution using LangChain autonomous agents with tool calling and multi-step reasoning to deliver real-time competitive intelligence and boost sales enablement.</li>
+              <li><strong>LLM Chatbot for FDL Onboarding:</strong> Developed a RAG-based chatbot using LangGraph, LangChain retrieval pipelines, and Azure AI Vector Store for semantic search — cutting manual query resolution by ~60%.</li>
+              <li><strong>Finance – Orders &amp; Shipments Cloud Migration:</strong> Led large-scale migration of financial data from on-premises infrastructure to the Azure cloud.</li>
+              <li><strong>Core Python Compute Engine Framework:</strong> Redesigned legacy ETL workflows with a federated cloud-native data lake on Azure for faster processing and enhanced scalability.</li>
+              <li><strong>AI/ML Architecture Review Board:</strong> Coordinated enterprise-wide governance sessions ensuring all GenAI projects met HP's security, compliance, and governance standards.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div class="tl-title-block">
+                <h3 class="tl-role">Data Engineer Intern</h3>
+                <span class="tl-company">HP Inc</span>
+              </div>
+              <span class="tl-date">Mar 2022 – Aug 2022</span>
+            </div>
+            <ul class="tl-list">
+              <li>Automated BMT &amp; BMDIS processes using Selenium-based Python bots — reducing manual effort, cutting turnaround time, and improving process efficiency by 50%.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <div class="section-tag">// what I've built</div>
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-card featured">
+          <div class="project-img" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">
+            <div class="project-img-icon">🤖</div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>OpenAI Agents SDK</span><span>MCP</span><span>Databricks Genie</span></div>
+            <h3>CCO Executive Chatbot</h3>
+            <p>Conversational Agentic AI BOT for HP's Chief Commercial Organization — giving C-suite and sales leaders natural-language access to live sales, funnel, and financial data, eliminating analyst dependency.</p>
+            <div class="project-links">
+              <a href="#" class="proj-link ghost">Enterprise Project @ HP</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-img" style="background: linear-gradient(135deg, #06b6d4, #0891b2);">
+            <div class="project-img-icon">🔍</div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>LangChain</span><span>Multi-Agent</span><span>Python</span></div>
+            <h3>Agentic GenAI Platform</h3>
+            <p>Real-time competitive intelligence platform using LangChain autonomous agents with tool calling and multi-step reasoning to boost sales enablement and customer engagement.</p>
+            <div class="project-links">
+              <a href="#" class="proj-link ghost">Enterprise Project @ HP</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-img" style="background: linear-gradient(135deg, #8b5cf6, #6366f1);">
+            <div class="project-img-icon">💬</div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>LangGraph</span><span>RAG</span><span>Azure AI</span></div>
+            <h3>LLM Chatbot – FDL Onboarding</h3>
+            <p>Internal RAG-based chatbot using LangGraph orchestration, LangChain retrieval pipelines, and Azure AI Vector Store for semantic search — cutting manual query resolution by ~60%.</p>
+            <div class="project-links">
+              <a href="#" class="proj-link ghost">Enterprise Project @ HP</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-img" style="background: linear-gradient(135deg, #10b981, #059669);">
+            <div class="project-img-icon">⚙️</div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span>Azure</span><span>PySpark</span><span>ETL</span></div>
+            <h3>Core Python Compute Engine</h3>
+            <p>Redesigned legacy ETL workflows with a federated cloud-native data lake on Azure — enabling faster processing and enhanced scalability across HP's financial data systems.</p>
+            <div class="project-links">
+              <a href="#" class="proj-link ghost">Enterprise Project @ HP</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION & CERTIFICATIONS -->
+  <section id="education" class="section">
+    <div class="container">
+      <div class="section-tag">// background & credentials</div>
+      <h2 class="section-title">Education &amp; Certifications</h2>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <div class="edu-icon">🎓</div>
+          <div class="edu-body">
+            <h3>Executive M.Tech — Data Science &amp; Analytics</h3>
+            <p class="edu-inst">IIT Bhilai</p>
+            <span class="edu-date">2024 – 2026 · Ongoing</span>
+          </div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-icon">🎓</div>
+          <div class="edu-body">
+            <h3>B.Tech — ECE, Minor in Computer Science</h3>
+            <p class="edu-inst">Pondicherry Engineering College</p>
+            <span class="edu-date">2018 – 2022</span>
+            <div class="edu-meta">
+              <span class="edu-badge">CGPA 9.63 / 10</span>
+              <span class="edu-badge gold">🏆 University 1st Rank</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cert-row">
+        <div class="cert-card">
+          <span class="cert-icon">☁️</span>
+          <div><strong>AWS Certified</strong><p>Cloud Practitioner</p></div>
+        </div>
+        <div class="cert-card">
+          <span class="cert-icon">🔷</span>
+          <div><strong>Microsoft Certified</strong><p>Azure Data Fundamentals</p></div>
+        </div>
+        <div class="cert-card">
+          <span class="cert-icon">🧠</span>
+          <div><strong>Databricks Certified</strong><p>Generative AI Fundamentals</p></div>
+        </div>
+      </div>
+      <div class="accolades-row">
+        <div class="accolade-item">🏅 Recognized by HP Leadership for Framework Team &amp; GenAI initiatives</div>
+        <div class="accolade-item">🎤 Gen AI Trainer — trained 250+ HP professionals on real-world GenAI</div>
+        <div class="accolade-item">🥇 Govt. of Puducherry Merit Prize — University 1st Rank (CGPA 9.71)</div>
+        <div class="accolade-item">🎖️ 3× HP Badges: Ambition &amp; Agility · We Grow Together · Customer First</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <div class="section-tag">// get in touch</div>
+      <h2 class="section-title">Let's Work Together</h2>
+      <p class="contact-sub">Have a project in mind? I'd love to hear about it. Drop me a message and let's make something great.</p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="ci-icon">📧</div>
+            <div><strong>Email</strong><p>arvindganesan2027@gmail.com</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">📞</div>
+            <div><strong>Phone</strong><p>+91 9566918668</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">📍</div>
+            <div><strong>Location</strong><p>India &middot; Open to Remote</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">⏰</div>
+            <div><strong>Availability</strong><p>Open to opportunities</p></div>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/" class="social-btn" title="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/arvindg1108" class="social-btn" title="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="social-btn" title="Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+            </a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary full-width">Send Message 🚀</button>
+          <div id="form-success" class="form-success" style="display:none;">✅ Thanks! I'll get back to you soon.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="nav-logo">AG<span class="dot">.</span></div>
+      <p>Designed & built by <strong>Arvind G</strong> — 2026</p>
+      <p class="footer-love">Made with ❤️ and lots of ☕</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
